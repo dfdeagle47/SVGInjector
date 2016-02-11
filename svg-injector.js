@@ -373,8 +373,8 @@
         styleTag.textContent += '';
       });
 
-      // Replace the image with the svg
-      el.parentNode.replaceChild(svg, el);
+      // Replace the image with the svg (if the parentNode still exists)
+      el.parentNode && el.parentNode.replaceChild(svg, el);
 
       // Now that we no longer need it, drop references
       // to the original element so it can be GC'd
